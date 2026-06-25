@@ -456,6 +456,70 @@
       font-size: 0.55rem;
     }
 
+    /* ── PROJECTS ── */
+    .proj-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .proj-item {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 2.5rem;
+      padding: 2.25rem 0;
+      border-bottom: 1px solid var(--line-lt);
+    }
+
+    .proj-item:first-child { border-top: 1px solid var(--line-lt); }
+
+    .proj-period {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.04em;
+      color: var(--ink-soft);
+      margin-bottom: 0.5rem;
+    }
+
+    .proj-org {
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: var(--ink-mid);
+    }
+
+    .proj-org a {
+      color: var(--ink-mid);
+      text-decoration: none;
+      border-bottom: 1px solid var(--line);
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .proj-org a:hover { color: var(--accent); border-bottom-color: var(--accent-lt); }
+
+    .proj-title {
+      font-family: var(--font-disp);
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 0.7rem;
+      line-height: 1.3;
+    }
+
+    .proj-desc {
+      font-size: 0.88rem;
+      color: var(--ink-mid);
+      line-height: 1.8;
+      font-weight: 300;
+      margin-bottom: 1rem;
+    }
+
+    .proj-docs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
     /* ── SKILLS ── */
     .skills-grid {
       display: grid;
@@ -632,6 +696,7 @@
       <li><a href="#publications">Research</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#education">Education</a></li>
+      <li><a href="#projects">Project</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -902,6 +967,45 @@
     </section>
 
     <hr class="section-divider" />
+
+    <!-- ── PROJECTS ── -->
+    <section id="projects">
+      <p class="section-label">Projects</p>
+      <div class="proj-list">
+
+        <div class="proj-item reveal">
+          <div class="proj-meta">
+            <div class="proj-period">2026</div>
+            <div class="proj-org">
+              <a href="https://luma.com/breaking-barriers-hackathon" target="_blank" rel="noopener">Breaking Barriers to AI Safety Hackathon</a>
+              <br />London Initiative for Safe AI (LISA) x BlueDot Impact
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-badges pub-badges">
+              <span class="badge venue">AI Safety</span>
+              <span class="badge">Multilingual LLMs</span>
+            </div>
+            <div class="proj-title">Community-in-the-Loop</div>
+            <div class="proj-desc">
+              Frontier models are trained on Western centric data. Quality drops in every non-English language tested, outputs cluster around English-speaking and Protestant-European values, and safety guardrails weaken sharply in low-resource languages. Community-in-the-Loop is a tool-agnostic MCP plug-in that lets people flag culturally inaccurate, irrelevant, or dangerous LLM responses, then aggregates those flags into verified community notes that enrich future answers with local context at inference time — no retraining required. It adds the first community-driven, post-deployment, multilingual correction layer to the AI safety stack. 
+              <p>This project was developed with Rukaya Alnasser, Catherine Moore, and Robyn Simms.</p>
+            </div>
+            <div class="proj-docs">
+              <a href="./documents/Community-in-the Loop.pdf" target="_blank" rel="noopener" class="pub-link">Idea brief (PDF) →</a>
+              <a href="./documents/AI-Safety-Hackathon.pdf" target="_blank" rel="noopener" class="pub-link">Presentation deck (PDF) →</a>
+            </div>
+            <div class="proj-tags exp-tags">
+              <span class="tag">MCP Plug-in</span>
+              <span class="tag">RAG</span>
+              <span class="tag">Cultural Alignment</span>
+              <span class="tag">Crowd-sourced Feedback</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
 
     
 
